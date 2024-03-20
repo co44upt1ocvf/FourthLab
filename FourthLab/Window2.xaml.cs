@@ -32,10 +32,13 @@ namespace FourthLab
             DataSet.ItemsSource = Customers.GetData();
             EmailCbx.ItemsSource = Emails.GetData();
         }
-
-        private void Search(object sender, RoutedEventArgs e)
+        private void SearchByName(object sender, RoutedEventArgs e)
         {
             DataSet.ItemsSource = Customers.SearchByName(Text.Text);
+        }
+
+        private void SearchBySurname(object sender, RoutedEventArgs e)
+        {
             DataSet.ItemsSource = Customers.SearchBySurname(Text.Text);
         }
 

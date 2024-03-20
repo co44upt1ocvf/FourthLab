@@ -27,10 +27,13 @@ namespace FourthLab
             EF.ItemsSource = context.Customers.ToList();
             EmailCbx.ItemsSource = context.Emails.ToList();
         }
-
-        private void Search(object sender, RoutedEventArgs e)
+        private void SearchByName(object sender, RoutedEventArgs e)
         {
             EF.ItemsSource = context.Customers.ToList().Where(item => item.Firstname.Contains(Text.Text));
+        }
+
+        private void SearchBySurname(object sender, RoutedEventArgs e)
+        {
             EF.ItemsSource = context.Customers.ToList().Where(item => item.Surname.Contains(Text.Text));
         }
 

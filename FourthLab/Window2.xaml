@@ -17,8 +17,13 @@
                 <ColumnDefinition Width="5*"/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <TextBox x:Name="Text"/>
-            <Button Click="Search" Content="Search" Grid.Column="1" FontSize="25" Background="Gold"/>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="Text" Grid.RowSpan="2"/>
+            <Button Click="SearchByName" Content="Search by Name" Grid.Column="1" Grid.Row="0" FontSize="15" Background="Gold"/>
+            <Button Click="SearchBySurname" Content="Search by Surname" Grid.Column="1" Grid.Row="1" FontSize="15" Background="Gold"/>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
